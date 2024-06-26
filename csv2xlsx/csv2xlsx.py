@@ -8,7 +8,7 @@ def convert_to_xlsx(output_file, csv_files):
             # Create a sheet name from the CSV filename, excluding the extension and limiting to 31 characters
             sheet_name = csv_file.replace('.csv', '')[:31]
             df.to_excel(writer, sheet_name=sheet_name, index=False)
-    print(f"Conversion complete: the file '{output_file}' has been created.")
+    print(f">[i] Conversion complete: '{output_file}' has been created.")
 
 def main():
     if len(sys.argv) < 3:
